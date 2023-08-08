@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lottie测试</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <p>动画播放位置</p>
+    <div id="lottieContainer"></div>
+    
+    <script>
+        // 获取容器
+        var lottieContainer = document.getElementById('lottieContainer');
+      
+        // 加载Lottie动画
+        var animation = bodymovin.loadAnimation({
+          container: lottieContainer, // 指定容器
+          path: './data.json', // JSON文件路径
+          renderer: 'svg', // 渲染器类型，可以是'svg'、'canvas'或'html'
+          loop: true, // 是否循环播放
+          autoplay: true // 是否自动播放
+        });
+    </script>
+  </body>
+</html>
